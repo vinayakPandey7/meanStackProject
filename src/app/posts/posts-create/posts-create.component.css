@@ -1,0 +1,12 @@
+mat-card {
+    /* width: 50%; */
+    margin: auto
+    
+}
+
+mat-form-field, textarea { 
+    width: 100%;
+    margin : 0px
+}
+textarea {height: 20px;}
+#saveBtn {display: flex,}

@@ -1,0 +1,49 @@
+<!-- <mat-card>
+    <mat-form-field>
+            <textarea rows="6" matInput [(ngModel)]="enteredTitle"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <textarea rows="6" matInput [(ngModel)]="enteredContent"></textarea>
+    </mat-form-field>
+    <button id="saveBtn" (click)="onAddPost()" mat-raised-button color="accent" >save post</button>
+</mat-card> -->
+
+<mat-card>
+    <form (submit)="onAddPost(postForm)" #postForm ="ngForm">
+        <mat-form-field>
+            <textarea   name="title" minlength="3" required matInput ngModel></textarea>
+        </mat-form-field>
+        <mat-form-field>
+            <textarea name="content" minlength="3" required matInput ngModel></textarea>
+        </mat-form-field>
+        <button id="saveBtn" type="submit" mat-raised-button color="accent" >save post</button>
+    </form>
+</mat-card>
+
+
+
+
+
+<!-- 
+    ( getting user Input )  event binding
+one way
+1)  (click)="onaddpost()" + ts:  onaddpost(){console.log('abcd')}    
+2)  [value] = "newPost"     ** for outputing data in template
+3)  #postThisContent  =>  (click)="addPost(postThisContent)"  + ts :   (postThisContent : HTMLTextContent){console(postThisContent.value)}
+
+two way
+module : ngform from angular form  +   [(ngModel)]="takeThisContent" => (click)="adPost(takeThisContent$)"  + ts : addPost(){takeThisContent}
+[(ngModel)] = "enteredValue" + ts: addpost() { this.value = enteredValue}
+
+
+*/to  get the property of any dom =>   #myPost  +++  user in ts by passing in any html
+-->
+
+<!-- to display
+1) interpolation
+    1) event binding 
+    (click)="onaddpost()" + {{newPost}} +++ ts: newPost : String = ' '  + onaddpost(){console}
+
+
+
+-->

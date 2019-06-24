@@ -1,0 +1,25 @@
+<!-- <app-header></app-header>
+<main> -->
+    <!--                    (create)=======>(app)                             -->
+    <!-- <app-posts-create (postCreated)="onPostAdded($event)"></app-posts-create> 
+    <app-post-list [listPost]="StoredPosts"></app-post-list> -->
+    <!--            (list) <===== (app)                                    -->
+<!-- </main>
+<router-outlet></router-outlet> -->
+
+
+<!-- 
+
+  postcreatComponent.html ==>    createComp.ts          ====>    app.comp.html +ts storedPosts(StoredPosts)   <===   listcompo.ts
+      (enteredTitle )         @output(postCreated)               "onPostAdded($event)"=> StoredPosts                    listPosts
+ -->
+
+
+ <app-header></app-header>
+<main>
+    <!--                    (create)=======>(app)                             -->
+    <app-posts-create ></app-posts-create> 
+    <app-post-list ></app-post-list>
+    <!--            (list) <===== (app)                                    -->
+</main>
+<router-outlet></router-outlet>
